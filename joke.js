@@ -1,12 +1,12 @@
 
-//We create a random nr generator 
+//Create a random nr generator 
 function random(num) {
     return  Math.floor(Math.random() * num); 
 }
 
 
 
-///Create outcomes with diffrent outcomes
+///Create outcomes with diffrent outcomes and store it into an object
 
 const outcomes = {
     day: ['Monday', 'Tuesday', 'Wedensday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -17,8 +17,7 @@ const outcomes = {
 /// Create output array
 const personalWisdom = [];
 
-
-
+//Iterate through the object's properties
 for( prop in outcomes) {
     let propIndex = random(outcomes[prop].length) //finds random index of properties
 
@@ -42,11 +41,12 @@ for( prop in outcomes) {
 }
 
 
+//We format the text so each message shows up in a new line 
 
 const formatText = text => {
     let edited = text.join('\n')
     console.log(edited)
 }
 
-
+//Run program 
 formatText(personalWisdom)
